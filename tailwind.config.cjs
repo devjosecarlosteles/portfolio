@@ -5,7 +5,17 @@ module.exports = {
     "./index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins1: ["Ubuntu", "sans-serif"],
+      },
+      backgroundImage: {
+        code: "url('/banner.png')",
+      },
+      colors: {
+        "dark": "#101010",
+      },
+    }
   },
   plugins: [],
 }
