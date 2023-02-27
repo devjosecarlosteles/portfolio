@@ -4,5 +4,5 @@ interface ExperienceCardDescriptionProps {
 }
 
 export default function ExperienceCardDescription ({ children }: ExperienceCardDescriptionProps) {
-  return <p>{ children }</p>
+  return <p className='whitespace-pre-line truncate line-clamp-5'>{ children }</p>
 }

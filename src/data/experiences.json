@@ -34,7 +34,7 @@
   {
     "company": "Incentiv.me",
     "position": "Backend Developer",
-    "description": "Ajudar a fomentar o time de Backend;\n Compartilhar conhecimento com o time;\n Estar atualizado com o mercado, identificar as novas tecnologias e manter o time motivado;\n Sugerir e fazer melhorias de código para o time;\n Desenvolver código limpo e de fácil manutenção;\n Colaborar no escopo e concepção de novas funcionalidades e soluções técnicas;\n Realizar melhorias e correções nos sistemas já existentes.",
+    "description": "Ajudar a fomentar o time de Backend; \n Compartilhar conhecimento com o time;\n Estar atualizado com o mercado, identificar as novas tecnologias e manter o time motivado;\n Sugerir e fazer melhorias de código para o time;\n Desenvolver código limpo e de fácil manutenção;\n Colaborar no escopo e concepção de novas funcionalidades e soluções técnicas;\n Realizar melhorias e correções nos sistemas já existentes.",
     "technologies": ["prisma", "aws", "typescript", "javascript", "sql", "postgres", "nodejs", "nestjs", "docker"],
     "start_date": "01/11/2022",
     "end_date": null

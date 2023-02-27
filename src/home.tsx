@@ -5,6 +5,8 @@ import { IoIosArrowDown, IoIosArrowUp, IoLogoNodejs, IoMdArrowDown } from 'react
 import { SiTypescript } from 'react-icons/si'
 import { useState } from 'react';
 import OtherTechs from './components/OtherTechs';
+import experiences from './data/experiences.json';
+import ExperienceCard from './components/ExperienceCard';
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
@@ -79,8 +81,20 @@ function Home() {
             
             <h2 className='pt-4 font-bold mb-2'>Experiências</h2>
 
-            <div>
-              
+            <div className='flex'>
+              { experiences.map(experience => (
+                  <ExperienceCard 
+                    companyName={ experience.company } 
+                    position={ experience.position } 
+                    start_date={ experience.start_date } 
+                    end_date={ experience.end_date }
+                  >
+                    <ExperienceCard.Description>
+                      { experience.description }
+                    </ExperienceCard.Description>
+                  </ExperienceCard>   
+                )) 
+              }
             </div>
 
             <h2 className='pt-4 font-bold mb-2'>Projetos</h2>
