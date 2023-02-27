@@ -14,5 +14,37 @@
     "technologies": ["docker", "nodejs", "dotnet", "kubernetes", "postgres", "mongodb"],
     "start_date": "21/09/2021",
     "end_date": "01/10/2022"
+  },
+  {
+    "company": "Rocketseat",
+    "position": "DevOps Developer",
+    "description": "Treinamento e execução de atividades e desafios nos seguintes temas: \n Processos seletivos - como se portar em processos de seleção de T.I. e gerenciar tempo de apresentação pessoal e de projetos.  \n Clean Code - refatoração de código com intuito de aplicar conceitos de código limpo e correção de testes. Trabalho em equipe no formato de Dojo Programming. \n Acessibilidade - verificadores de acessibilidade, leitor de tela, contraste adequado de cores, textos alternativos em multimídia, navegação acessível via teclado. \n Consumo de API: Elaboração de chatbot de WhastApp com Twilio Studio e JavaScript em Pair Programming.",
+    "technologies": ["twilio", "nodejs", "reactjs", "javascript", "typescript", "html", "css"],
+    "start_date": "01/02/2022",
+    "end_date": "01/03/2022"
+  },
+  {
+    "company": "StackX",
+    "position": "Educator of Programming",
+    "description": "Aulas ao vivo, para iniciantes sobre: HTML, CSS, Javascript, Node.JS e Typescript. \n Aplicação e correção de desafios. \n Elaboração de apresentações e conteúdos sobre os temas citados.",
+    "technologies": ["nodejs", "javascript", "typescript", "html", "css"],
+    "start_date": "01/02/2022",
+    "end_date": "01/03/2022"
+  },
+  {
+    "company": "Incentiv.me",
+    "position": "Backend Developer",
+    "description": "Ajudar a fomentar o time de Backend;\n Compartilhar conhecimento com o time;\n Estar atualizado com o mercado, identificar as novas tecnologias e manter o time motivado;\n Sugerir e fazer melhorias de código para o time;\n Desenvolver código limpo e de fácil manutenção;\n Colaborar no escopo e concepção de novas funcionalidades e soluções técnicas;\n Realizar melhorias e correções nos sistemas já existentes.",
+    "technologies": ["prisma", "aws", "typescript", "javascript", "sql", "postgres", "nodejs", "nestjs", "docker"],
+    "start_date": "01/11/2022",
+    "end_date": null
+  },
+  {
+    "company": "Gama Academy",
+    "position": "Educator of Programming",
+    "description": "Apresentar Workshops semanais sobre fundamentos em programação, tais como HTML e CSS, Javascript, Git, Node.JS e Express",
+    "technologies": ["typescript", "javascript", "sql", "mysql", "nodejs", "html", "css", "git"],
+    "start_date": "01/12/2022",
+    "end_date": null
   }
 ]

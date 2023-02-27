@@ -80,7 +80,7 @@ function Home() {
             <h2 className='pt-4 font-bold mb-2'>Experiências</h2>
 
             <div>
-
+              
             </div>
 
             <h2 className='pt-4 font-bold mb-2'>Projetos</h2>
