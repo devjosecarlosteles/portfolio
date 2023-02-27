@@ -28,9 +28,9 @@ function Home() {
               atualmente trabalho como <strong>Desenvolvedor Backend</strong> e <strong>Mentor</strong> de programação, fui finalista do Show Me The Code, primeiro reality de programação da América Latina.
             </p>
 
-           <h2 className='pt-4 font-bold mb-2'>Tecnologias</h2>
+            <h2 className='pt-4 font-bold mb-2'>Tecnologias</h2>
 
-           <div className='flex items-center justify-center flex-wrap'>
+            <div className='flex items-center justify-center flex-wrap'>
               <TechCard className='mr-3'>
                 <TechCard.Icon>
                   <SiNestjs size={40} />
@@ -63,19 +63,29 @@ function Home() {
                 <TechCard.Title>PostgresSQL</TechCard.Title>
               </TechCard>
               { showOtherTechs ? <OtherTechs/> : null }
-           </div>
-           <div className='flex items-center justify-center w-[100vw]'>
-            { showOtherTechs 
-              ?  <IoIosArrowUp 
-                    onClick={() => setShowOtherTechs(!showOtherTechs)} 
-                    className='mr-6 mt-2' 
-                  /> 
-              : <IoIosArrowDown 
-                    onClick={() => setShowOtherTechs(!showOtherTechs)} 
-                    className='mr-6 mt-2' 
-                />
-            }
-           </div>
+            </div>
+            <div className='flex items-center justify-center w-[100vw]'>
+              { showOtherTechs 
+                ?  <IoIosArrowUp 
+                      onClick={() => setShowOtherTechs(!showOtherTechs)} 
+                      className='mr-6 mt-2' 
+                    /> 
+                : <IoIosArrowDown 
+                      onClick={() => setShowOtherTechs(!showOtherTechs)} 
+                      className='mr-6 mt-2' 
+                  />
+              }
+            </div>
+            
+            <h2 className='pt-4 font-bold mb-2'>Experiências</h2>
+
+            <div>
+
+            </div>
+
+            <h2 className='pt-4 font-bold mb-2'>Projetos</h2>
+
+            
           </div>
        </div>
     </div>

@@ -1,0 +1,18 @@
+[
+  {
+    "company": "Arch Office",
+    "position": "Backend Developer",
+    "description": "Desenvolvimento de API'S, CLI e Frameworks com Javascript, Typescript. Trabalho com bancos de dados relacionais e não relacionais como Postgress e MongoDb",
+    "technologies": ["docker", "nodejs", "dotnet", "express", "postgres", "mongodb"],
+    "start_date": "21/09/2021",
+    "end_date": "01/07/2022"
+  },
+  {
+    "company": "Arch Office",
+    "position": "DevOps Developer",
+    "description": "Criação de Microsservices, Batchs, APIS com Node.JS, .NET e configuração de infraestrutura com docker e kubernetes em ambientes azure e Digital Ocean.",
+    "technologies": ["docker", "nodejs", "dotnet", "kubernetes", "postgres", "mongodb"],
+    "start_date": "21/09/2021",
+    "end_date": "01/10/2022"
+  }
+]
