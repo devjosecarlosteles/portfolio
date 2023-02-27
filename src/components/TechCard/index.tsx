@@ -1,14 +1,17 @@
 import { ReactNode } from 'react';
 import TechCardIcon from './TechCardIcon/index';
+import TechCardTitle from './TechCardTitle/index';
 
 interface TechCardProps {
-  children: ReactNode
+  children: ReactNode;
+  className?: string;
 }
 
-function TechCard({ children }: TechCardProps) {
-  return <div className='w-[80px] h-[90px] bg-green-700 text-white'>
+export default function TechCard({ children, className }: TechCardProps) {
+  return <div className={`w-[80px] h-[90px] bg-green-900 text-white flex flex-col items-center justify-center rounded-md ${ className }`}>
     { children }
   </div>
 }
 
-export default Object.assign(TechCard, TechCardIcon)
+TechCard.Icon = TechCardIcon
+TechCard.Title = TechCardTitle

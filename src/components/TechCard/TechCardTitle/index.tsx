@@ -6,6 +6,6 @@ interface TechCardTitle {
 
 export default function TechCardTitle({ children }: TechCardTitle) {
   return (
-    <p>{ children }</p>
+    <p className="font-bold text-xs">{ children }</p>
   )
 }
