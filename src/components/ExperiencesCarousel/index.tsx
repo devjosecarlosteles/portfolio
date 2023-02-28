@@ -38,6 +38,8 @@ export default function ExperiencesCarousel ({ experiences }: ExperiencesCarouse
               <ExperienceCard.Description>
                 { experience.description }
               </ExperienceCard.Description>
+
+              <ExperienceCard.Technologies technologies={experience.technologies} />
             </ExperienceCard>    
         
         ))}

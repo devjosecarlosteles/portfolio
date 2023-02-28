@@ -43,7 +43,7 @@
     "company": "Gama Academy",
     "position": "Educator of Programming",
     "description": "Apresentar Workshops semanais sobre fundamentos em programação, tais como HTML e CSS, Javascript, Git, Node.JS e Express",
-    "technologies": ["typescript", "javascript", "sql", "mysql", "nodejs", "html", "css", "git"],
+    "technologies": ["typescript", "javascript", "mysql", "nodejs", "html", "css", "git"],
     "start_date": "01/12/2022",
     "end_date": null
   }
