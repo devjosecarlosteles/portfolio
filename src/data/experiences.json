@@ -17,7 +17,7 @@
   },
   {
     "company": "Rocketseat",
-    "position": "DevOps Developer",
+    "position": "Participante do Show Me The Code",
     "description": "Treinamento e execução de atividades e desafios nos seguintes temas: \n Processos seletivos - como se portar em processos de seleção de T.I. e gerenciar tempo de apresentação pessoal e de projetos.  \n Clean Code - refatoração de código com intuito de aplicar conceitos de código limpo e correção de testes. Trabalho em equipe no formato de Dojo Programming. \n Acessibilidade - verificadores de acessibilidade, leitor de tela, contraste adequado de cores, textos alternativos em multimídia, navegação acessível via teclado. \n Consumo de API: Elaboração de chatbot de WhastApp com Twilio Studio e JavaScript em Pair Programming.",
     "technologies": ["twilio", "nodejs", "reactjs", "javascript", "typescript", "html", "css"],
     "start_date": "01/02/2022",

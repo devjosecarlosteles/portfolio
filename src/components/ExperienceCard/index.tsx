@@ -10,7 +10,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ children, companyName, position, start_date, end_date }: ExperienceCardProps) {
   return (
-    <div className='w-[96%] h-[200px] truncate bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block'>
+    <div className='w-[340px] h-[200px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block'>
       <strong>{ companyName }</strong>
 
       <i><span className='block'>{ position }</span></i>

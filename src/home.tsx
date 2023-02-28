@@ -7,10 +7,12 @@ import { useState } from 'react';
 import OtherTechs from './components/OtherTechs';
 import experiences from './data/experiences.json';
 import ExperienceCard from './components/ExperienceCard';
+import ExperiencesCarousel from './components/ExperiencesCarousel/index';
+import techNameStringToJsxIcon from './core/utils/techNameStringToJsxIcon';
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
-
+  const Icons = techNameStringToJsxIcon('javascript')
   return (
     <div className="bg-dark w-[100vw] h-[100vh] text-white overflow-x-hidden">
        <div className='bg-code bg-no-repeat w-[100vw] h-[20vh] pt-[90px] w-screen'>
@@ -81,24 +83,12 @@ function Home() {
             
             <h2 className='pt-4 font-bold mb-2'>Experiências</h2>
 
-            <div className='flex'>
-              { experiences.map(experience => (
-                  <ExperienceCard 
-                    companyName={ experience.company } 
-                    position={ experience.position } 
-                    start_date={ experience.start_date } 
-                    end_date={ experience.end_date }
-                  >
-                    <ExperienceCard.Description>
-                      { experience.description }
-                    </ExperienceCard.Description>
-                  </ExperienceCard>   
-                )) 
-              }
+            <div className="w-[1000px]">
+              <ExperiencesCarousel experiences={experiences} />
             </div>
-
+            
             <h2 className='pt-4 font-bold mb-2'>Projetos</h2>
-
+            
             
           </div>
        </div>

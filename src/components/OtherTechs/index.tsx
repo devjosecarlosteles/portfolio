@@ -1,8 +1,18 @@
 import { SiAmazonaws, SiAwsamplify, SiDocker, SiJavascript, SiPrisma } from 'react-icons/si';
 import TechCard from '../TechCard/index';
+import {motion} from 'framer-motion'
+
 export default function OtherTechs() {
   return (
-    <div className='flex w-[100%] items-center justify-center mt-3'>
+    <motion.div 
+        animate={{ y: 10  }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20
+        }}
+       className='flex w-[100%] items-center justify-center mt-3'
+      >
       <TechCard className='mr-3'>
         <TechCard.Icon>
           <SiJavascript size={40} />
@@ -42,6 +52,6 @@ export default function OtherTechs() {
           Prisma
         </TechCard.Title>
       </TechCard>
-    </div>
+    </motion.div>
   )
 }
