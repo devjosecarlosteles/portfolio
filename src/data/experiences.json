@@ -5,14 +5,15 @@
     "description": "Desenvolvimento de API'S, CLI e Frameworks com Javascript, Typescript. Trabalho com bancos de dados relacionais e não relacionais como Postgress e MongoDb",
     "technologies": ["docker", "nodejs", "dotnet", "express", "postgres", "mongodb"],
     "start_date": "21/09/2021",
-    "end_date": "01/07/2022"
+    "end_date": "21/10/2022",
+    "type": "freelancer"
   },
   {
     "company": "Arch Office",
     "position": "DevOps Developer",
     "description": "Criação de Microsservices, Batchs, APIS com Node.JS, .NET e configuração de infraestrutura com docker e kubernetes em ambientes azure e Digital Ocean.",
     "technologies": ["docker", "nodejs", "dotnet", "kubernetes", "postgres", "mongodb"],
-    "start_date": "21/09/2021",
+    "start_date": "01/07/2022",
     "end_date": "01/10/2022"
   },
   {
@@ -28,14 +29,14 @@
     "position": "Educator of Programming",
     "description": "Aulas ao vivo, para iniciantes sobre: HTML, CSS, Javascript, Node.JS e Typescript. \n Aplicação e correção de desafios. \n Elaboração de apresentações e conteúdos sobre os temas citados.",
     "technologies": ["nodejs", "javascript", "typescript", "html", "css"],
-    "start_date": "01/02/2022",
-    "end_date": "01/03/2022"
+    "start_date": "01/08/2022",
+    "end_date": "01/10/2022"
   },
   {
     "company": "Incentiv.me",
     "position": "Backend Developer",
     "description": "Ajudar a fomentar o time de Backend; \n Compartilhar conhecimento com o time;\n Estar atualizado com o mercado, identificar as novas tecnologias e manter o time motivado;\n Sugerir e fazer melhorias de código para o time;\n Desenvolver código limpo e de fácil manutenção;\n Colaborar no escopo e concepção de novas funcionalidades e soluções técnicas;\n Realizar melhorias e correções nos sistemas já existentes.",
-    "technologies": ["prisma", "aws", "typescript", "javascript", "sql", "postgres", "nodejs", "nestjs", "docker"],
+    "technologies": ["prisma", "aws", "typescript", "javascript", "postgres", "nodejs", "nestjs", "docker"],
     "start_date": "01/11/2022",
     "end_date": null
   },
