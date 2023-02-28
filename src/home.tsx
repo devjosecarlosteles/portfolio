@@ -9,10 +9,11 @@ import experiences from './data/experiences.json';
 import ExperienceCard from './components/ExperienceCard';
 import ExperiencesCarousel from './components/ExperiencesCarousel/index';
 import techNameStringToJsxIcon from './core/utils/techNameStringToJsxIcon';
+import Contacts from './components/Contacts';
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
-  const Icons = techNameStringToJsxIcon('javascript')
+
   return (
     <div className="bg-dark w-[100vw] h-[100vh] text-white overflow-x-hidden">
        <div className='bg-code bg-no-repeat w-[100vw] h-[20vh] pt-[90px] w-screen'>
@@ -89,7 +90,15 @@ function Home() {
             
             <h2 className='pt-4 font-bold mb-2'>Projetos</h2>
             
+            <h3>Em breve...</h3>
+
+            <div className='w-[100%] items-center flex justify-center mb-2 mt-2'>
+              <Contacts/>
+            </div>
             
+            <div className='w-[100%] items-center flex justify-center'>
+              <span className='text-gray-300'>desenvolvido pro <a href='https://www.github.com/devjosecarlosteles'>José Carlos Teles</a></span>
+            </div>
           </div>
        </div>
     </div>
