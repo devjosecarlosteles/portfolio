@@ -13,7 +13,7 @@ export default function OtherTechs() {
         }}
        className='flex w-[100%] items-center justify-center mt-3'
       >
-      <TechCard className='mr-3'>
+      <TechCard className='mr-1'>
         <TechCard.Icon>
           <SiJavascript size={40} />
         </TechCard.Icon>
@@ -23,7 +23,7 @@ export default function OtherTechs() {
         </TechCard.Title>
       </TechCard>
 
-      <TechCard className='mr-3'>
+      <TechCard className='mr-1'>
         <TechCard.Icon>
           <SiDocker size={40} />
         </TechCard.Icon>
@@ -33,7 +33,7 @@ export default function OtherTechs() {
         </TechCard.Title>
       </TechCard>
 
-      <TechCard className='mr-3'>
+      <TechCard className='mr-1'>
         <TechCard.Icon>
           <SiAmazonaws size={40} />
         </TechCard.Icon>
@@ -43,7 +43,7 @@ export default function OtherTechs() {
         </TechCard.Title>
       </TechCard>
 
-      <TechCard className='mr-3'>
+      <TechCard className='mr-1'>
         <TechCard.Icon>
           <SiPrisma size={40} />
         </TechCard.Icon>
