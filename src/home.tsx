@@ -50,7 +50,7 @@
           </div>
 
           <div className="pl-4">
-            <p className="pt-2 lg:pl-[7%] lg:hidden">
+            <p className="pt-2 lg:pl-[7%] md:hidden">
               Olá sou José Carlos Teles, desenvolvedor fullstack, atualmente
               trabalho como <strong>Desenvolvedor Backend</strong> e{" "}
               <strong>Mentor</strong> de programação, fui finalista do Show Me The
