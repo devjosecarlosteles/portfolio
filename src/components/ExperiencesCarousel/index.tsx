@@ -14,7 +14,6 @@ export default function ExperiencesCarousel({
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    console.log(-width - width / 2);
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, [width]);
   return (
