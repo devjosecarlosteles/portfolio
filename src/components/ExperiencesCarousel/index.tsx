@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ExperienceCard from "../ExperienceCard/index";
 import { useEffect, useRef, useState } from "react";
+import { cutStringAndAddEllipsis } from "../../core/utils/string.utils";
 
 interface ExperiencesCarouselProps {
   experiences: any[];
@@ -32,8 +33,12 @@ export default function ExperiencesCarousel({
       >
         {experiences
           .sort((a, b) => {
-            const dateA: any = new Date(a.start_date.split("/").reverse().join("-"));
-            const dateB: any = new Date(b.start_date.split("/").reverse().join("-"));
+            const dateA: any = new Date(
+              a.start_date.split("/").reverse().join("-")
+            );
+            const dateB: any = new Date(
+              b.start_date.split("/").reverse().join("-")
+            );
             return dateB - dateA;
           })
           .map((experience) => (
@@ -44,7 +49,7 @@ export default function ExperiencesCarousel({
               end_date={experience.end_date}
             >
               <ExperienceCard.Description>
-                {experience.description}
+                {cutStringAndAddEllipsis(experience.description, 160)}
               </ExperienceCard.Description>
 
               <ExperienceCard.Technologies

@@ -126,7 +126,7 @@ function Home() {
 
           <div className="flex justify-center mt-10 mb-4">
             <button
-              className="rounded-3xl p-2 w-[70%] shadow-lg shadow-green-300/30 font-bold bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-600 lg:w-[300px]"
+              className="rounded-full p-2 text-sm font-bold  bg-transparen lg:w-[140px]  text-green-500 hover:border-green-500 hover:border-2 hover:text-white"
               onClick={() =>
                 (window.location.href =
                   "https://api.whatsapp.com/send?phone=5511992407129&text=Ola")
