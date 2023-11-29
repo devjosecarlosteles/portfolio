@@ -16,6 +16,9 @@ export default function ExperiencesCarousel({
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, [width]);
+
+  const approximateCardSize: number = 280;
+
   return (
     <motion.div
       className="cursor-grab overflow-hidden w-[100%]"
@@ -23,7 +26,10 @@ export default function ExperiencesCarousel({
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
-        dragConstraints={{ right: 0, left: -width - width / 2 }}
+        dragConstraints={{
+          right: 0,
+          left: -approximateCardSize * experiences.length,
+        }}
         drag="x"
         className="flex"
         initial={{ x: 100 }}
@@ -46,6 +52,7 @@ export default function ExperiencesCarousel({
               position={experience.position}
               start_date={experience.start_date}
               end_date={experience.end_date}
+              key={experience.company + experience.start_date}
             >
               <ExperienceCard.Description>
                 {cutStringAndAddEllipsis(experience.description, 160)}
