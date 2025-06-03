@@ -8,6 +8,7 @@ interface ExperienceCardProps {
   position: string;
   start_date: string;
   end_date: string | null;
+  onClick?: () => void;
 }
 
 export default function ExperienceCard({
@@ -16,9 +17,13 @@ export default function ExperienceCard({
   position,
   start_date,
   end_date,
+  onClick,
 }: ExperienceCardProps) {
   return (
-    <div className="w-[340px] h-[240px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700">
+    <div
+      onClick={onClick}
+      className="w-[340px] h-[240px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700 cursor-pointer"
+    >
       <strong>{companyName}</strong>
 
       <div className="flex">
