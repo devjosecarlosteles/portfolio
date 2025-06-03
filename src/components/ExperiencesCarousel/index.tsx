@@ -13,7 +13,9 @@ export default function ExperiencesCarousel({
 }: ExperiencesCarouselProps) {
   const carousel = useRef<any>();
   const [width, setWidth] = useState(0);
-  const [selectedExperience, setSelectedExperience] = useState<any | null>(null);
+  const [selectedExperience, setSelectedExperience] = useState<any | null>(
+    null
+  );
   const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
