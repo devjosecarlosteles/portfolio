@@ -13,7 +13,10 @@ export default function ExperiencesCarousel({
 }: ExperiencesCarouselProps) {
   const carousel = useRef<any>();
   const [width, setWidth] = useState(0);
-  const [selectedExperience, setSelectedExperience] = useState<any | null>(null);
+  const [selectedExperience, setSelectedExperience] = useState<any | null>(
+    null
+  );
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
@@ -38,6 +41,8 @@ export default function ExperiencesCarousel({
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.4 }}
+          onDragStart={() => setIsDragging(true)}
+          onDragEnd={() => setTimeout(() => setIsDragging(false), 0)}
         >
           {experiences
             .sort((a, b) => {
@@ -56,7 +61,10 @@ export default function ExperiencesCarousel({
                 start_date={experience.start_date}
                 end_date={experience.end_date}
                 key={experience.company + experience.start_date}
-                onClick={() => setSelectedExperience(experience)}
+                onClick={() => {
+                  if (isDragging) return;
+                  setSelectedExperience(experience);
+                }}
               >
                 <ExperienceCard.Description>
                   {cutStringAndAddEllipsis(experience.description, 160)}
