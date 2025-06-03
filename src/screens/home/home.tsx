@@ -26,7 +26,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-dark bg-gradient-to-b to-dark from-black w-[100vw] h-[100vh] text-white overflow-x-hidden ">
+    <div className="bg-black bg-gradient-to-b from-black via-gray-900 to-green-900 w-[100vw] min-h-screen text-white overflow-x-hidden ">
       <div className="bg-code bg-no-repeat w-[100vw] h-[20vh] pt-[90px] lg:bg-codeLarger bg-100% lg:h-[16vh]">
         <div className="flex w-[100%] ml-2 justify-between pr-4 text-white items-center lg:justify-start  lg:pl-10">
           <div className="lg:h-[300px] lg:w-[100px]">
