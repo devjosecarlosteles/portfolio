@@ -2,12 +2,14 @@ import ExperienceCardDescription from "./components/ExperienceCardDescription/in
 import { ReactNode } from "react";
 import ExperienceCardTechnologies from "./components/ExperienceCardTechnologies/index";
 import calcDiffOfDateExperience from "../../core/utils/calcDiffOfDateExperience";
+import moment from "moment";
 interface ExperienceCardProps {
   children?: ReactNode;
   companyName: string;
   position: string;
   start_date: string;
   end_date: string | null;
+  onClick?: () => void;
 }
 
 export default function ExperienceCard({
@@ -16,9 +18,13 @@ export default function ExperienceCard({
   position,
   start_date,
   end_date,
+  onClick,
 }: ExperienceCardProps) {
   return (
-    <div className="w-[340px] h-[240px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700">
+    <div
+      onClick={onClick}
+      className="w-[340px] h-[240px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700 cursor-pointer"
+    >
       <strong>{companyName}</strong>
 
       <div className="flex">
@@ -26,6 +32,12 @@ export default function ExperienceCard({
           <span className="block ">{position}</span>
         </i>{" "}
         -<span>{calcDiffOfDateExperience(start_date, end_date)}</span>
+      </div>
+
+      <div className="text-xs text-gray-300">
+        {moment(start_date, "DD/MM/YYYY").format("DD-MM-YYYY")}
+        {end_date ?
+          ` - ${moment(end_date, "DD/MM/YYYY").format("DD-MM-YYYY")}` : ""}
       </div>
 
       {children}
