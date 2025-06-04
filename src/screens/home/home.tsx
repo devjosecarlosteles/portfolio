@@ -14,6 +14,8 @@ import experiences from "../../data/experiences.json";
 import ExperiencesCarousel from "../../components/ExperiencesCarousel/index";
 import Contacts from "../../components/Contacts";
 import Technologies from "./components/technologies";
+import ProjectCard from "../../components/ProjectCard";
+import projects from "../../data/projects.json";
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
@@ -89,7 +91,16 @@ function Home() {
 
           <h2 className="pt-4 font-bold mb-2">Projetos</h2>
 
-          <h3>Em breve...</h3>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+              />
+            ))}
+          </div>
 
           <div className="flex justify-center mt-10 mb-4">
             <button
