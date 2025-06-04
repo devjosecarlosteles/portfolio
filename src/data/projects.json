@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Projeto Exemplo 1",
+    "description": "Descrição breve do projeto de exemplo 1 para demonstrar o layout.",
+    "image": "/LOGO.png"
+  },
+  {
+    "title": "Projeto Exemplo 2",
+    "description": "Descrição breve do projeto de exemplo 2 para demonstrar o layout.",
+    "image": "/vite.svg"
+  }
+]
