@@ -3,6 +3,7 @@ import ExperienceCard from "../ExperienceCard/index";
 import { useEffect, useRef, useState } from "react";
 import { cutStringAndAddEllipsis } from "../../core/utils/string.utils";
 import Modal from "../Modal";
+import moment from "moment";
 
 interface ExperiencesCarouselProps {
   experiences: any[];
@@ -86,6 +87,17 @@ export default function ExperiencesCarousel({
             : ""
         }
       >
+        {selectedExperience && (
+          <div className="mb-4 text-sm text-gray-300">
+            {moment(selectedExperience.start_date, "DD/MM/YYYY").format("DD-MM-YYYY")}
+            {selectedExperience.end_date && (
+              <>
+                {" - "}
+                {moment(selectedExperience.end_date, "DD/MM/YYYY").format("DD-MM-YYYY")}
+              </>
+            )}
+          </div>
+        )}
         {selectedExperience?.description}
       </Modal>
     </>
