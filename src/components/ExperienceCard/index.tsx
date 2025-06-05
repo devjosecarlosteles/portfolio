@@ -23,7 +23,7 @@ export default function ExperienceCard({
   return (
     <div
       onClick={onClick}
-      className="w-[340px] h-[240px] mr-2 bg-green-800 rounded-md shadow-sm p-3 mb-2 inline-block bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700 cursor-pointer"
+      className="w-full max-w-md bg-green-800 rounded-md shadow-sm p-3 mb-4 bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700 cursor-pointer"
     >
       <strong>{companyName}</strong>
 
