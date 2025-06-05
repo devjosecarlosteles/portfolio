@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-import ExperienceCard from "../ExperienceCard/index";
-import { useEffect, useRef, useState } from "react";
+import ExperienceCard from "../ExperienceCard";
+import { useState } from "react";
 import { cutStringAndAddEllipsis } from "../../core/utils/string.utils";
 import Modal from "../Modal";
 import moment from "moment";
@@ -9,75 +8,37 @@ interface ExperiencesCarouselProps {
   experiences: any[];
 }
 
-export default function ExperiencesCarousel({
-  experiences,
-}: ExperiencesCarouselProps) {
-  const carousel = useRef<any>();
-  const [width, setWidth] = useState(0);
-  const [selectedExperience, setSelectedExperience] = useState<any | null>(
-    null
-  );
-  const [isDragging, setIsDragging] = useState(false);
+export default function ExperiencesCarousel({ experiences }: ExperiencesCarouselProps) {
+  const [selectedExperience, setSelectedExperience] = useState<any | null>(null);
 
-  useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
-  }, [width]);
-
-  const approximateCardSize: number = 280;
+  const orderedExperiences = experiences.sort((a, b) => {
+    const dateA: any = new Date(a.start_date.split("/").reverse().join("-"));
+    const dateB: any = new Date(b.start_date.split("/").reverse().join("-"));
+    return dateB - dateA;
+  });
 
   return (
     <>
-      <motion.div
-        className="cursor-grab overflow-hidden w-[100%]"
-        ref={carousel}
-        whileTap={{ cursor: "grabbing" }}
-      >
-        <motion.div
-          dragConstraints={{
-            right: 0,
-            left: -approximateCardSize * experiences.length,
-          }}
-          drag="x"
-          className="flex"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.4 }}
-          onDragStart={() => setIsDragging(true)}
-          onDragEnd={() => setTimeout(() => setIsDragging(false), 0)}
-        >
-          {experiences
-            .sort((a, b) => {
-              const dateA: any = new Date(
-                a.start_date.split("/").reverse().join("-")
-              );
-              const dateB: any = new Date(
-                b.start_date.split("/").reverse().join("-")
-              );
-              return dateB - dateA;
-            })
-            .map((experience) => (
-              <ExperienceCard
-                companyName={experience.company}
-                position={experience.position}
-                start_date={experience.start_date}
-                end_date={experience.end_date}
-                key={experience.company + experience.start_date}
-                onClick={() => {
-                  if (isDragging) return;
-                  setSelectedExperience(experience);
-                }}
-              >
-                <ExperienceCard.Description>
-                  {cutStringAndAddEllipsis(experience.description, 160)}
-                </ExperienceCard.Description>
-
-                <ExperienceCard.Technologies
-                  technologies={experience.technologies}
-                />
-              </ExperienceCard>
-            ))}
-        </motion.div>
-      </motion.div>
+      <div className="relative pl-8">
+        <div className="absolute left-2 top-0 bottom-0 w-1 bg-green-700"></div>
+        {orderedExperiences.map((experience) => (
+          <div key={experience.company + experience.start_date} className="relative pb-8">
+            <span className="absolute -left-3 top-5 w-3 h-3 bg-green-500 rounded-full"></span>
+            <ExperienceCard
+              companyName={experience.company}
+              position={experience.position}
+              start_date={experience.start_date}
+              end_date={experience.end_date}
+              onClick={() => setSelectedExperience(experience)}
+            >
+              <ExperienceCard.Description>
+                {cutStringAndAddEllipsis(experience.description, 160)}
+              </ExperienceCard.Description>
+              <ExperienceCard.Technologies technologies={experience.technologies} />
+            </ExperienceCard>
+          </div>
+        ))}
+      </div>
       <Modal
         open={selectedExperience !== null}
         onClose={() => setSelectedExperience(null)}
