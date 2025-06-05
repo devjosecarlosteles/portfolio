@@ -21,25 +21,17 @@ export default function ExperienceCard({
   onClick,
 }: ExperienceCardProps) {
   return (
-    <div
-      onClick={onClick}
-      className="w-full max-w-md bg-green-800 rounded-md shadow-sm p-3 mb-4 bg-gradient-to-tl from-teal-900 via-emerald-800 to-green-700 cursor-pointer"
-    >
-      <strong>{companyName}</strong>
-
-      <div className="flex">
-        <i>
-          <span className="block ">{position}</span>
-        </i>{" "}
-        -<span>{calcDiffOfDateExperience(start_date, end_date)}</span>
-      </div>
-
-      <div className="text-xs text-gray-300">
+    <div onClick={onClick} className="cursor-pointer">
+      <time className="mb-1 text-sm font-normal leading-none text-gray-400">
         {moment(start_date, "DD/MM/YYYY").format("DD-MM-YYYY")}
-        {end_date ?
-          ` - ${moment(end_date, "DD/MM/YYYY").format("DD-MM-YYYY")}` : ""}
+        {end_date ? ` - ${moment(end_date, "DD/MM/YYYY").format("DD-MM-YYYY")}` : ""}
+      </time>
+      <h3 className="text-lg font-semibold text-white">{companyName}</h3>
+      <div className="flex text-sm text-gray-200 mb-2">
+        <span>{position}</span>
+        <span className="mx-1">-</span>
+        <span>{calcDiffOfDateExperience(start_date, end_date)}</span>
       </div>
-
       {children}
     </div>
   );
