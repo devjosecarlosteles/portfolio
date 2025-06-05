@@ -9,7 +9,6 @@ interface ExperienceCardProps {
   position: string;
   start_date: string;
   end_date: string | null;
-  onClick?: () => void;
 }
 
 export default function ExperienceCard({
@@ -18,10 +17,9 @@ export default function ExperienceCard({
   position,
   start_date,
   end_date,
-  onClick,
 }: ExperienceCardProps) {
   return (
-    <div onClick={onClick} className="cursor-pointer">
+    <div>
       <time className="mb-1 text-sm font-normal leading-none text-gray-400">
         {moment(start_date, "DD/MM/YYYY").format("DD-MM-YYYY")}
         {end_date ? ` - ${moment(end_date, "DD/MM/YYYY").format("DD-MM-YYYY")}` : ""}
