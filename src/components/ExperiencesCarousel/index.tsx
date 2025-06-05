@@ -22,13 +22,13 @@ export default function ExperiencesCarousel({ experiences }: ExperiencesCarousel
 
   return (
     <>
-      <ol className="relative border-s border-green-700">
+      <ol className="relative border-l border-green-700">
         {orderedExperiences.map((experience) => (
           <li
             key={experience.company + experience.start_date}
-            className="mb-10 ms-4"
+            className="relative mb-10 ml-6"
           >
-            <div className="absolute w-3 h-3 bg-green-500 rounded-full mt-1 -start-1.5 border border-white"></div>
+            <div className="absolute w-3 h-3 bg-green-500 rounded-full mt-1.5 -left-3 border border-white"></div>
             <ExperienceCard
               companyName={experience.company}
               position={experience.position}
