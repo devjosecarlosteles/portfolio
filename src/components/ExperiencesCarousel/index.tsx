@@ -11,7 +11,10 @@ interface ExperiencesCarouselProps {
 export default function ExperiencesCarousel({ experiences }: ExperiencesCarouselProps) {
   const [selectedExperience, setSelectedExperience] = useState<any | null>(null);
 
-  const orderedExperiences = experiences.sort((a, b) => {
+  const orderedExperiences = [...experiences].sort((a, b) => {
+    if (!a.end_date && b.end_date) return -1;
+    if (!b.end_date && a.end_date) return 1;
+
     const dateA: any = new Date(a.start_date.split("/").reverse().join("-"));
     const dateB: any = new Date(b.start_date.split("/").reverse().join("-"));
     return dateB - dateA;
@@ -19,11 +22,13 @@ export default function ExperiencesCarousel({ experiences }: ExperiencesCarousel
 
   return (
     <>
-      <div className="relative pl-8">
-        <div className="absolute left-2 top-0 bottom-0 w-1 bg-green-700"></div>
+      <ol className="relative border-s border-green-700">
         {orderedExperiences.map((experience) => (
-          <div key={experience.company + experience.start_date} className="relative pb-8">
-            <span className="absolute -left-3 top-5 w-3 h-3 bg-green-500 rounded-full"></span>
+          <li
+            key={experience.company + experience.start_date}
+            className="mb-10 ms-4"
+          >
+            <div className="absolute w-3 h-3 bg-green-500 rounded-full mt-1 -start-1.5 border border-white"></div>
             <ExperienceCard
               companyName={experience.company}
               position={experience.position}
@@ -36,9 +41,9 @@ export default function ExperiencesCarousel({ experiences }: ExperiencesCarousel
               </ExperienceCard.Description>
               <ExperienceCard.Technologies technologies={experience.technologies} />
             </ExperienceCard>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       <Modal
         open={selectedExperience !== null}
         onClose={() => setSelectedExperience(null)}
