@@ -26,9 +26,9 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-black bg-gradient-to-b from-black via-gray-900 to-green-900 w-[100vw] min-h-screen text-white overflow-x-hidden ">
-      <div className="bg-code bg-no-repeat w-[100vw] h-[20vh] pt-[90px] lg:bg-codeLarger bg-100% lg:h-[16vh]">
-        <div className="flex w-[100%] ml-2 justify-between pr-4 text-white items-center lg:justify-start  lg:pl-10">
+    <div className="bg-black bg-gradient-to-b from-black via-gray-900 to-green-900 w-full min-h-screen text-white overflow-x-hidden ">
+      <div className="bg-code bg-no-repeat w-full h-[20vh] pt-[90px] lg:bg-codeLarger bg-100% lg:h-[16vh]">
+        <div className="flex w-full justify-between text-white items-center lg:justify-start max-w-screen-lg mx-auto px-4 lg:px-10">
           <div className="lg:h-[300px] lg:w-[100px]">
             <img
               src={joseCircleSm}
@@ -57,7 +57,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="pl-4">
+        <div className="max-w-screen-lg mx-auto px-4">
           <p className="pt-2 lg:pl-[7%] md:hidden">
             Olá sou José Carlos Teles, desenvolvedor fullstack, atualmente
             trabalho como <strong>Desenvolvedor Backend</strong> e{" "}
@@ -67,7 +67,7 @@ function Home() {
 
           <Technologies showOtherTechs={showOtherTechs} />
 
-          <div className="flex lg:hidden items-center justify-center w-[100vw]">
+          <div className="flex lg:hidden items-center justify-center w-full">
             {showOtherTechs ? (
               <IoIosArrowUp
                 onClick={() => setShowOtherTechs(!showOtherTechs)}
@@ -83,7 +83,7 @@ function Home() {
 
           <h2 className="pt-4 font-bold mb-2 lg:text-[1.4rem]">Experiências</h2>
 
-          <div className="w-[1000px] lg:w-[100vw]">
+          <div className="w-full max-w-[1000px] mx-auto">
             <ExperiencesCarousel experiences={experiences} />
           </div>
 
