@@ -14,8 +14,6 @@ import experiences from "../../data/experiences.json";
 import ExperiencesCarousel from "../../components/ExperiencesCarousel/index";
 import Contacts from "../../components/Contacts";
 import Technologies from "./components/technologies";
-import ProjectCard from "../../components/ProjectCard";
-import projects from "../../data/projects.json";
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
@@ -89,18 +87,6 @@ function Home() {
             <ExperiencesCarousel experiences={experiences} />
           </div>
 
-          <h2 className="pt-4 font-bold mb-2">Projetos</h2>
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-              />
-            ))}
-          </div>
 
           <div className="flex justify-center mt-10 mb-4">
             <button
@@ -118,14 +104,14 @@ function Home() {
             <Contacts />
           </div>
 
-          <div className="w-[100%] items-center flex justify-center">
-            <span className="text-gray-300">
-              desenvolvido com 💚 por{" "}
-              <a href="https://www.github.com/devjosecarlosteles">
-                José Carlos Teles
-              </a>
-            </span>
-          </div>
+          <footer className="w-[100%] flex justify-center">
+            <a
+              href="https://www.instagram.com/devjosecarlosteles"
+              className="text-gray-300"
+            >
+              desenvolvido com ❤️ por José Carlos Teles
+            </a>
+          </footer>
         </div>
       </div>
     </div>
