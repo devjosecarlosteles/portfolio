@@ -14,6 +14,9 @@ import experiences from "../../data/experiences.json";
 import ExperiencesCarousel from "../../components/ExperiencesCarousel/index";
 import Contacts from "../../components/Contacts";
 import Technologies from "./components/technologies";
+import RecommendationCard from "../../components/RecommendationCard";
+import recommendations from "../../data/recommendations.json";
+import { FaUserTie, FaUserCog, FaUserFriends } from "react-icons/fa";
 
 function Home() {
   const [showOtherTechs, setShowOtherTechs] = useState<boolean>(false);
@@ -83,8 +86,29 @@ function Home() {
 
           <h2 className="pt-4 font-bold mb-2 lg:text-[1.4rem]">Experiências</h2>
 
-          <div className="w-full max-w-[1000px] mx-auto">
-            <ExperiencesCarousel experiences={experiences} />
+  <div className="w-full max-w-[1000px] mx-auto">
+    <ExperiencesCarousel experiences={experiences} />
+  </div>
+
+          <h2 className="pt-8 font-bold mb-2 lg:text-[1.4rem]">Recomendações</h2>
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            {recommendations.map((rec, index) => {
+              const icons = [
+                <FaUserTie key="tie" />,
+                <FaUserCog key="cog" />,
+                <FaUserFriends key="friends" />,
+              ];
+
+              return (
+                <RecommendationCard
+                  key={rec.name}
+                  name={rec.name}
+                  role={rec.role}
+                  text={rec.text}
+                  icon={icons[index % icons.length]}
+                />
+              );
+            })}
           </div>
 
 
