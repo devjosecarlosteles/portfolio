@@ -13,6 +13,7 @@ import OtherTechs from "../../components/OtherTechs";
 import experiences from "../../data/experiences.json";
 import ExperiencesCarousel from "../../components/ExperiencesCarousel/index";
 import Contacts from "../../components/Contacts";
+import ContactForm from "../../components/ContactForm";
 import Technologies from "./components/technologies";
 import RecommendationCard from "../../components/RecommendationCard";
 import recommendations from "../../data/recommendations.json";
@@ -113,15 +114,7 @@ function Home() {
 
 
           <div className="flex justify-center mt-10 mb-4">
-            <button
-              className="rounded-full p-2 text-sm font-bold  bg-transparen lg:w-[140px]  text-green-500 hover:border-green-500 hover:border-2 hover:text-white"
-              onClick={() =>
-                (window.location.href =
-                  "https://api.whatsapp.com/send?phone=5511992407129&text=Ola")
-              }
-            >
-              Entre em contato
-            </button>
+            <ContactForm />
           </div>
 
           <div className="w-[100%] items-center flex justify-center mb-6 mt-2">
