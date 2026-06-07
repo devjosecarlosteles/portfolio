@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black bg-gradient-to-b from-black via-gray-900 to-green-900;
+  @apply bg-[#0b0d10];
 }
 
 *::-webkit-scrollbar {
@@ -16,7 +16,15 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: green;
+  background-color: #52525b;
   border-radius: 50px;
-  /* border: 3px solid gr; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #67e8f9;
+  color: #09090b;
 }

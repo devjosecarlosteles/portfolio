@@ -1,0 +1,221 @@
+{
+  "person": {
+    "name": "Jose Carlos Teles",
+    "headline": "Backend Developer, mentor de programacao e criador de conteudo",
+    "location": "Sao Paulo, Brasil",
+    "email": "devjosecarlosteles@gmail.com",
+    "avatar": "https://github.com/devjosecarlosteles.png",
+    "intro": "Eu desenho e construo produtos digitais com foco em backend, APIs, arquitetura de servicos e experiencias web objetivas. Minha atuacao combina entrega de software, mentoria tecnica e conteudo para desenvolvedores que querem evoluir com pratica.",
+    "availability": "Aberto a conversas sobre backend, SaaS, educacao em tecnologia e projetos web sob demanda."
+  },
+  "metrics": [
+    {
+      "label": "Repositorios publicos",
+      "value": "57"
+    },
+    {
+      "label": "Seguidores nas midias sociais",
+      "value": "+12K"
+    },
+    {
+      "label": "Anos de experiencia profissional",
+      "value": "+5"
+    },
+    {
+      "label": "Finalista",
+      "value": "Show Me The Code"
+    }
+  ],
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/devjosecarlosteles/",
+      "kind": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/devjosecarlosteles",
+      "kind": "github"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@DevJos%C3%A9CarlosTeles",
+      "kind": "youtube"
+    }
+  ],
+  "focus": [
+    "Backend com Node.js, TypeScript, NestJS, Prisma e bancos relacionais",
+    "Produtos SaaS, automacoes, integracoes e servicos escalaveis",
+    "Mentoria tecnica, revisao de codigo, conteudo e formacao de devs",
+    "Frontend moderno quando o produto pede uma experiencia completa"
+  ],
+  "technologies": {
+    "core": [
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "Docker"
+    ],
+    "frontend": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "HTML",
+      "CSS"
+    ],
+    "cloudAndTools": [
+      "AWS",
+      "Kubernetes",
+      "Git",
+      "MongoDB",
+      "MySQL",
+      "Twilio"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Incentiv.me",
+      "role": "Backend Developer",
+      "period": "2022 - atual",
+      "type": "Produto / impacto social",
+      "summary": "Atuacao em sistemas backend, evolucao de arquitetura, melhoria de codigo e colaboracao tecnica com o time para transformar processos de leis de incentivo em produto digital.",
+      "highlights": [
+        "Construcao e manutencao de APIs e servicos em ambiente JavaScript/TypeScript",
+        "Colaboracao em escopo tecnico, concepcao de funcionalidades e qualidade de entrega",
+        "Compartilhamento de conhecimento e mentoria tecnica no time"
+      ],
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "NestJS",
+        "PostgreSQL",
+        "Prisma",
+        "AWS",
+        "Docker"
+      ]
+    },
+    {
+      "company": "Gama Academy",
+      "role": "Educator of Programming",
+      "period": "2022 - 2023",
+      "type": "Educacao",
+      "summary": "Conducao de workshops e conteudos sobre fundamentos de programacao, web e backend para pessoas em formacao.",
+      "highlights": [
+        "Aulas e workshops sobre HTML, CSS, JavaScript, Git, Node.js e Express",
+        "Traducao de conceitos tecnicos em exemplos praticos para iniciantes"
+      ],
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "Git",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "company": "StackX",
+      "role": "Educator of Programming",
+      "period": "2022",
+      "type": "Educacao",
+      "summary": "Mentoria e aulas ao vivo para iniciantes, com foco em fundamentos web, backend e resolucao de desafios.",
+      "highlights": [
+        "Aulas ao vivo sobre JavaScript, TypeScript, Node.js, HTML e CSS",
+        "Criacao e correcao de desafios tecnicos"
+      ],
+      "stack": [
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "company": "Arch Office",
+      "role": "Backend / DevOps Developer",
+      "period": "2021 - 2022",
+      "type": "Consultoria e software",
+      "summary": "Desenvolvimento de APIs, servicos, automacoes e configuracoes de infraestrutura para produtos e sistemas internos.",
+      "highlights": [
+        "APIs e ferramentas com JavaScript, TypeScript, Node.js e .NET",
+        "Trabalho com bancos relacionais, nao relacionais, Docker e Kubernetes"
+      ],
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        ".NET",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Instituto Acao Mover",
+      "label": "Freela recente",
+      "url": "https://www.institutoacaomover.com.br/",
+      "summary": "Projeto web sob demanda para apresentar uma instituicao de atuacao social com comunicacao clara, presenca digital e acesso direto ao publico.",
+      "stack": [
+        "Web",
+        "Landing page",
+        "Conteudo institucional"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Canal Dev Jose Carlos Teles",
+      "label": "Conteudo",
+      "url": "https://www.youtube.com/@DevJos%C3%A9CarlosTeles",
+      "summary": "Canal dedicado a programacao, carreira, ferramentas e discussoes praticas sobre o dia a dia de desenvolvimento de software.",
+      "stack": [
+        "YouTube",
+        "Programacao",
+        "Mentoria"
+      ],
+      "featured": true
+    },
+    {
+      "name": "GitHub devjosecarlosteles",
+      "label": "Open source e laboratorio",
+      "url": "https://github.com/devjosecarlosteles",
+      "summary": "Espaco publico com repositorios, experimentos, estudos e projetos que refletem a evolucao tecnica e a pratica constante.",
+      "stack": [
+        "GitHub",
+        "Projetos",
+        "Estudos"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Instagram @devjosecarlosteles",
+      "label": "Conteudo rapido",
+      "url": "https://www.instagram.com/devjosecarlosteles/",
+      "summary": "Conteudos curtos, dicas, insights e bastidores do dia a dia de um desenvolvedor de software, com foco em backend, carreira e ferramentas.",
+      "stack": [
+        "Instagram",
+        "Dicas",
+        "Bastidores"
+      ],
+      "featured": false
+    }
+  ],
+  "content": {
+    "title": "Conteudo para quem constroi software de verdade",
+    "description": "No YouTube e nas redes, compartilho aprendizados sobre programacao, ferramentas, bastidores de desenvolvimento e formas mais praticas de evoluir como dev.",
+    "cta": "Assistir no YouTube",
+    "url": "https://www.youtube.com/@DevJos%C3%A9CarlosTeles"
+  },
+  "contact": {
+    "title": "Vamos construir algo com criterio?",
+    "description": "Me chame para conversar sobre backend, produto, mentoria tecnica, conteudo ou um projeto web bem executado.",
+    "primaryLabel": "Enviar email",
+    "primaryUrl": "mailto:devjosecarlosteles@gmail.com",
+    "secondaryLabel": "Falar no LinkedIn",
+    "secondaryUrl": "https://www.linkedin.com/in/devjosecarlosteles/"
+  }
+}
