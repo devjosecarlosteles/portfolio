@@ -49,6 +49,40 @@
     "Mentoria tecnica, revisao de codigo, conteudo e formacao de devs",
     "Frontend moderno quando o produto pede uma experiencia completa"
   ],
+  "actions": {
+    "consultingLabel": "Agendar Consultoria",
+    "consultingUrl": "#consultoria",
+    "mentoringLabel": "Conhecer Mentorias",
+    "mentoringUrl": "#mentoria"
+  },
+  "services": [
+    {
+      "kind": "consulting",
+      "title": "Consultoria para empresas",
+      "items": [
+        "IA aplicada a processos",
+        "Automacoes com n8n",
+        "Integracoes entre sistemas",
+        "Arquitetura Backend",
+        "APIs escalaveis"
+      ],
+      "cta": "Solicitar conversa",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_TwavOu_Y6FgdqAiioUVIaUX4fNJgdAqjEKQWPg44ILi2PA/viewform?usp=publish-editor"
+    },
+    {
+      "kind": "mentoring",
+      "title": "Mentoria para desenvolvedores",
+      "items": [
+        "Backend Node.js/NestJS",
+        "Arquitetura de Software",
+        "Carreira e Mercado",
+        "Freelancer e PJ",
+        "IA para Desenvolvedores"
+      ],
+      "cta": "Solicitar mentoria",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfNbBpNor2Jy07XJbMv1-28Muw1dJEmoz39VWI3lGAlFcO-Lw/viewform?usp=publish-editor"
+    }
+  ],
   "technologies": {
     "core": [
       "TypeScript",

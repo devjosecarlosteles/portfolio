@@ -2,7 +2,9 @@ import {
   FaArrowRight,
   FaExternalLinkAlt,
   FaGithub,
+  FaGraduationCap,
   FaLinkedin,
+  FaRocket,
   FaYoutube,
 } from "react-icons/fa";
 import { FiMail, FiMapPin, FiTerminal } from "react-icons/fi";
@@ -65,13 +67,13 @@ function Home() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={profile.contact.primaryUrl} className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded bg-cyan-900 px-5 text-sm font-bold text-zinc-950 transition hover:bg-cyan-700">
-                <FiMail />
-                {profile.contact.primaryLabel}
+              <a href={profile.actions.consultingUrl} className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded bg-lime-700 px-5 text-sm font-bold text-zinc-950 transition hover:bg-lime-600">
+                <FaRocket />
+                {profile.actions.consultingLabel}
               </a>
-              <a href={profile.content.url} target="_blank" rel="noreferrer" className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded border border-white/15 px-5 text-sm font-semibold text-zinc-100 transition hover:border-lime-300/60 hover:text-lime-200">
-                <FaYoutube />
-                {profile.content.cta}
+              <a href={profile.actions.mentoringUrl} className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded border border-white/15 px-5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-300/60 hover:text-cyan-200">
+                <FaGraduationCap />
+                {profile.actions.mentoringLabel}
               </a>
             </div>
           </div>
@@ -108,6 +110,34 @@ function Home() {
                 <FaArrowRight className="mb-5 text-lime-300" />
                 {item}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-zinc-950/45">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:py-20">
+          <SectionTitle eyebrow="Como posso ajudar" title="Consultoria e mentoria para transformar conhecimento tecnico em resultado." />
+          <div className="grid gap-4 lg:grid-cols-2">
+            {profile.services.map((service) => (
+              <article id={service.kind === "consulting" ? "consultoria" : "mentoria"} key={service.title} className="rounded border border-white/10 bg-zinc-900/45 p-5 text-zinc-300">
+                <div className="mb-5 flex items-center gap-3 text-lime-300">
+                  {service.kind === "consulting" ? <FaRocket /> : <FaGraduationCap />}
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <ul className="grid gap-3 text-sm leading-6 text-zinc-400">
+                  {service.items.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <FaArrowRight className="mt-1 shrink-0 text-lime-300" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={service.url} className="mt-6 inline-flex min-h-[44px] items-center justify-center gap-3 rounded border border-cyan-300/30 px-4 text-sm font-semibold text-cyan-100 transition hover:border-cyan-300/70 hover:text-cyan-200">
+                  {service.cta}
+                  <FaArrowRight />
+                </a>
+              </article>
             ))}
           </div>
         </div>
